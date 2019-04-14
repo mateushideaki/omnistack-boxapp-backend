@@ -13,6 +13,16 @@ class BoxController {
         });
         return res.json(box);
     }
+
+    async delete(req, res) {
+        const box = await Box.findById(req.params.id);
+
+        // const filePath = `${path.resolve(__dirname, '..', '..', 'tmp')}${file.path}`;
+        // console.log(filePath);
+        // await File.findByIdAndDelete(req.params.id);
+
+        return res.json("Aqui");
+    }
 }
 
 module.exports = new BoxController();
